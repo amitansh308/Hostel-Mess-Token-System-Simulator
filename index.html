@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hostel Mess Producer-Consumer Simulator</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <h1>Hostel Mess Token System</h1>
+
+        <p>Producer–Consumer Problem Simulator</p>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= SYSTEM FLOW ================= -->
+
+        <section class="system-flow">
+
+
+            <!-- PRODUCER -->
+
+            <div class="system-card producer">
+
+                <h2>Producer</h2>
+
+                <p>Hostel Mess Token Counter</p>
+
+                <span class="icon">🎫</span>
+
+                <p>Generates meal tokens for students</p>
+
+            </div>
+
+
+            <!-- ARROW -->
+
+            <div class="arrow">
+                ➜
+            </div>
+
+
+            <!-- BUFFER -->
+
+            <div class="system-card buffer">
+
+                <h2>Shared Buffer</h2>
+
+                <p>Waiting Token Queue</p>
+
+
+                <!-- Buffer slots will be created by JavaScript -->
+
+                <div id="buffer" class="buffer-slots">
+
+                </div>
+
+
+                <p>
+                    Buffer Capacity:
+                    <strong id="capacity">5</strong>
+                </p>
+
+            </div>
+
+
+            <!-- ARROW -->
+
+            <div class="arrow">
+                ➜
+            </div>
+
+
+            <!-- CONSUMER -->
+
+            <div class="system-card consumer">
+
+                <h2>Consumer</h2>
+
+                <p>Mess Serving Counter</p>
+
+                <span class="icon">🍽️</span>
+
+                <p>Serves students using tokens</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats">
+
+
+            <!-- EMPTY -->
+
+            <div class="stat-card">
+
+                <h3>Empty Slots</h3>
+
+                <p id="emptyCount">5</p>
+
+            </div>
+
+
+            <!-- FULL -->
+
+            <div class="stat-card">
+
+                <h3>Full Slots</h3>
+
+                <p id="fullCount">0</p>
+
+            </div>
+
+
+            <!-- MUTEX -->
+
+            <div class="stat-card">
+
+                <h3>Mutex</h3>
+
+                <p id="mutexStatus">Unlocked</p>
+
+            </div>
+
+
+            <!-- SERVED -->
+
+            <div class="stat-card">
+
+                <h3>Students Served</h3>
+
+                <p id="servedCount">0</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SIMULATION CONTROLS ================= -->
+
+        <section class="controls">
+
+            <h2>Simulation Controls</h2>
+
+
+            <div class="buttons">
+
+
+                <!-- Producer Button -->
+
+                <button id="generateBtn">
+                    Generate Token
+                </button>
+
+
+                <!-- Consumer Button -->
+
+                <button id="serveBtn">
+                    Serve Next Token
+                </button>
+
+
+                <!-- Automatic Simulation -->
+
+                <button id="autoBtn">
+                    Start Auto Simulation
+                </button>
+
+
+                <!-- Reset -->
+
+                <button id="resetBtn">
+                    Reset Simulation
+                </button>
+
+            </div>
+
+
+            <!-- System Status -->
+
+            <p id="statusMessage">
+                System ready. Generate a token to begin.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= ACTIVITY LOG ================= -->
+
+        <section class="log-section">
+
+            <h2>System Activity Log</h2>
+
+
+            <div id="log" class="log">
+
+                <p>
+                    Welcome! The Producer–Consumer simulator is ready.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Operating Systems Practical |
+            Producer–Consumer Problem |
+            Hostel Mess Token System
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript File -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
